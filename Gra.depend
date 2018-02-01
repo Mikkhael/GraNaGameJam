@@ -398,3 +398,29 @@
 	<string>
 	<vector>
 
+1517527876 source:c:\users\bondg\desktop\sfml\granagamejam\main.cpp
+	<SFML/Graphics.hpp>
+	<iostream>
+	<vector>
+	"Vectors.hpp"
+	"Object.hpp"
+	"TextureManager.hpp"
+
+1517444234 c:\users\bondg\desktop\sfml\granagamejam\vectors.hpp
+	<iostream>
+	<cmath>
+
+1517528045 c:\users\bondg\desktop\sfml\granagamejam\texturemanager.hpp
+	<map>
+
+1517500415 c:\users\bondg\desktop\sfml\granagamejam\staticobject.hpp
+	"Object.hpp"
+
+1517527903 c:\users\bondg\desktop\sfml\granagamejam\object.hpp
+	"Vectors.hpp"
+	"TextureManager.hpp"
+	"Animations.hpp"
+
+1517527518 c:\users\bondg\desktop\sfml\granagamejam\animations.hpp
+	<vector>
+

@@ -4,6 +4,12 @@
 #include <iostream>
 #include <cmath>
 
+#define M_PI       3.14159265358979323846
+#define M_PI_2     1.57079632679489661923
+#define M_PI_180   0.01745329251994329577
+
+#define TORAD(x) x*M_PI_180
+
 template<typename T>
 class Vector2
 {
@@ -18,22 +24,22 @@ public:
     {}
     
     template<typename T_>
-    Vector2<T> operator+(Vector2<T_> v)
+    Vector2<T> operator+(Vector2<T_> v) const
     {
         return Vector2<T>(x + v.x, y + v.y);
     }
     template<typename T_>
-    Vector2<T> operator-(Vector2<T_> v)
+    Vector2<T> operator-(Vector2<T_> v) const
     {
         return Vector2<T>(x - v.x, y - v.y);
     }
     template<typename T_>
-    Vector2<T> operator*(T_ s)
+    Vector2<T> operator*(T_ s) const
     {
         return Vector2<T>(x * s, y * s);
     }
     template<typename T_>
-    Vector2<T> operator/(T_ s)
+    Vector2<T> operator/(T_ s) const
     {
         return Vector2<T>(x / s, y / s);
     }
@@ -67,13 +73,18 @@ public:
         return *this;
     }
     
-    long double magnatudeSquared();
-    long double magnatude();
-    Vector2<long double> normalize();
+    long double magnatudeSquared() const;
+    long double magnatude() const;
+    Vector2<long double> normalize() const;
     Vector2<T>& normalizeSelf();
-    Vector2<T> rotate(double angle);
+    Vector2<T> rotate(double angle) const;
     Vector2<T>& rotateSelf(double angle);
     
+    template<typename _T>
+    operator sf::Vector2<_T>()
+    {
+        return sf::Vector2<_T>(x, y);
+    }
     
     
     void SHOW()
@@ -84,19 +95,19 @@ public:
 };
 
 template<typename T>
-long double Vector2<T>::magnatudeSquared()
+long double Vector2<T>::magnatudeSquared() const
 {
     return x*x+y*y;
 }
 
 template<typename T>
-long double Vector2<T>::magnatude()
+long double Vector2<T>::magnatude() const
 {
     return std::sqrt(x*x+y*y);
 }
 
 template<typename T>
-Vector2<long double> Vector2<T>::normalize()
+Vector2<long double> Vector2<T>::normalize() const
 {
     auto mag = magnatude();
     return Vector2<long double>(x/mag, y/mag);
@@ -112,7 +123,7 @@ Vector2<T>& Vector2<T>::normalizeSelf()
 }
 
 template<typename T>
-Vector2<T> Vector2<T>::rotate(double angle)
+Vector2<T> Vector2<T>::rotate(double angle) const
 {
     auto c = std::cos(angle);
     auto s = std::sin(angle);
@@ -131,21 +142,31 @@ Vector2<T>& Vector2<T>::rotateSelf(double angle)
 }
 
 template<typename T, typename _T>
-Vector2<_T> operator*(T s, Vector2<_T> v)
+Vector2<_T> operator*(T s, const Vector2<_T>& v)
 {
     return Vector2<_T>(v.x * s, v.y * s);
 }
 template<typename T, typename _T>
-Vector2<_T> operator/(T s, Vector2<_T> v)
+Vector2<_T> operator/(T s, const Vector2<_T>& v)
 {
     return Vector2<_T>(s / v.x, s / v.y);
 }
 
-using Vector2i = Vector2<int>;
-using Vector2u = Vector2<unsigned int>;
-using Vector2ull = Vector2<unsigned long long>;
-using Vector2d = Vector2<double>;
-using Vector2f = Vector2<float>;
-using Vector2ld = Vector2<long double>;
+using Vector2i      = Vector2<int>;
+using Vector2u      = Vector2<unsigned int>;
+using Vector2ull    = Vector2<unsigned long long>;
+using Vector2d      = Vector2<double>;
+using Vector2f      = Vector2<float>;
+using Vector2ld     = Vector2<long double>;
+
+namespace Vectors
+{
+    const Vector2d foreward(1,0);
+    const Vector2d backward(-1,0);
+    const Vector2d up(0,1);
+    const Vector2d down(0,-1);
+    const Vector2d units(1,1);
+    const Vector2d null(0,0);
+}
 
 #endif // VECTORS_HPP_INCLUDED

@@ -1,19 +1,40 @@
 #include <SFML/Graphics.hpp>
 #include <iostream>
+#include <vector>
 #include "Vectors.hpp"
+#include "Object.hpp"
+#include "TextureManager.hpp"
 
 using namespace std;
 
+vector<Object> walls;
+
+
 int main()
 {
-    sf::RenderWindow window(sf::VideoMode(200, 200), "SFML works!");
-    sf::CircleShape shape(100.f);
-    shape.setFillColor(sf::Color::Green);
+    sf::RenderWindow window(sf::VideoMode(800, 600), "Game");
     
-    Vector2d v(100, 5);
-    v.SHOW();
-    v.rotate(90).SHOW();
-    v.rotateSelf(90).SHOW();
+    walls.push_back(Object("walls/brick.bmp", sf::IntRect(0,0,100,100)));
+    walls.push_back(Object("walls/planks.bmp", sf::IntRect(0,0,100,50)));
+    walls.push_back(Object("walls/rocks.bmp"));
+    walls.push_back(Object("walls/rocks.bmp"));
+    walls.push_back(Object("walls/brick.bmp"));
+    
+    walls[0].sprite.setPosition(2,0);
+    
+    walls[1].sprite.setPosition(50,0);
+    
+    walls[2].sprite.setPosition(200,200);
+    walls[2].setSize(sf::IntRect(0,0,30,100));
+    
+    walls[3].sprite.setPosition(300,200);
+    walls[3].setSize(sf::IntRect(0,0,30,100));
+    
+    walls[4].sprite.setPosition(400,400);
+    walls[4].setSize(sf::IntRect(0,0,100,100));
+    
+    sf::Sprite X;
+    X.setTexture(textureManager.get("walls/brick.bmp"));
     
     while (window.isOpen())
     {
@@ -23,9 +44,19 @@ int main()
             if (event.type == sf::Event::Closed)
                 window.close();
         }
-
-        window.clear();
-        window.draw(shape);
+        
+        
+        for(auto i = 0u; i<walls.size(); i++)
+        {
+            //walls[i].draw(window);
+        }
+        
+        window.draw(walls[0].sprite);
+        
+        //cout<<walls[0].sprite.getPosition().x<<" "<<walls[0].sprite.getPosition().y<<" "<<walls[0].sprite.getTextureRect().height<<endl;
+        window.draw(X);
+        
+        window.clear();        
         window.display();
     }
 
