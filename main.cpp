@@ -14,7 +14,7 @@ int main()
 {
     sf::RenderWindow window(sf::VideoMode(800, 600), "Game");
     
-    walls.push_back(Object("walls/brick.bmp", sf::IntRect(0,0,100,100)));
+    walls.push_back(Object("walls/brick.bmp", sf::IntRect(0,0,400,400)));
     walls.push_back(Object("walls/planks.bmp", sf::IntRect(0,0,100,50)));
     walls.push_back(Object("walls/rocks.bmp"));
     walls.push_back(Object("walls/rocks.bmp"));
@@ -33,9 +33,6 @@ int main()
     walls[4].sprite.setPosition(400,400);
     walls[4].setSize(sf::IntRect(0,0,100,100));
     
-    sf::Sprite X;
-    X.setTexture(textureManager.get("walls/brick.bmp"));
-    
     while (window.isOpen())
     {
         sf::Event event;
@@ -46,17 +43,14 @@ int main()
         }
         
         
+        window.clear();     
+        
         for(auto i = 0u; i<walls.size(); i++)
         {
-            //walls[i].draw(window);
+            walls[i].draw(window);
         }
         
-        window.draw(walls[0].sprite);
         
-        //cout<<walls[0].sprite.getPosition().x<<" "<<walls[0].sprite.getPosition().y<<" "<<walls[0].sprite.getTextureRect().height<<endl;
-        window.draw(X);
-        
-        window.clear();        
         window.display();
     }
 
