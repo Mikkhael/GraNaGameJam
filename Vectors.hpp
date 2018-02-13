@@ -23,6 +23,11 @@ public:
         : x(_x), y(_y)
     {}
     
+    template<typename _T>
+    Vector2(const sf::Vector2<_T>& v)
+        : x(v.x), y(v.y)
+    {}
+    
     template<typename T_>
     Vector2<T> operator+(Vector2<T_> v) const
     {
@@ -81,7 +86,7 @@ public:
     Vector2<T>& rotateSelf(double angle);
     
     template<typename _T>
-    operator sf::Vector2<_T>()
+    operator sf::Vector2<_T>() const
     {
         return sf::Vector2<_T>(x, y);
     }

@@ -52,7 +52,8 @@ public:
     
     sf::IntRect get()
     {
-        return get(frameCounter/length);
+        //std::cout<<framesCount<<" "<<frameCounter<<" "<<length<<std::endl;
+        return get(framesCount * frameCounter/length);
     }
     
     sf::IntRect get(int f)
@@ -76,13 +77,13 @@ public:
         }
     }
     
-    Animation(AnimationPreset a)
-        : baseFrame(a.rect) , framesCount(a.framesCount), length(a.length), framesPerRow(a.framesPerRow)
+    Animation(const AnimationPreset& a)
+        : baseFrame(a.rect), length(a.length), framesCount(a.framesCount), framesPerRow(a.framesPerRow)
     {
         
     }
     
-    void setPreset(AnimationPreset a)
+    void setPreset(const AnimationPreset& a)
     {
         reset();
         baseFrame = a.rect;
@@ -90,12 +91,22 @@ public:
         framesCount = a.framesCount;
         framesPerRow = a.framesPerRow;
     }
+    
+    bool compareWithPreset(const AnimationPreset& ap)
+    {
+        return baseFrame    == ap.rect         &&
+               length       == ap.length       &&
+               framesCount  == ap.framesCount  &&
+               framesPerRow == ap.framesPerRow;
+    }
 };
 
 
 namespace AnimationPresets
 {
-    
+    AnimationPreset PlayerIdle{sf::IntRect(0,0,16,16), 1, 2};
+    AnimationPreset PlayerWalk{sf::IntRect(0,16,16,16), 0.5, 4};
+    AnimationPreset PlayerFly {sf::IntRect(16,16,16,16), 0, 1};
 }
 
 
