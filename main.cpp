@@ -7,7 +7,10 @@
 #include "TextureManager.hpp"
 #include "Player.hpp"
 <<<<<<< HEAD
+<<<<<<< HEAD
 #include "lights.hpp"
+=======
+>>>>>>> 39ba166d83db2967e509b8e1fc77bc542fb82957
 =======
 >>>>>>> 39ba166d83db2967e509b8e1fc77bc542fb82957
 
@@ -17,10 +20,13 @@ vector<Object> creatures;
 
 Player player;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 const float zoom = 3;
 const float WIDTH = 800;
 const float HTIGH = 600;
+=======
+>>>>>>> 39ba166d83db2967e509b8e1fc77bc542fb82957
 =======
 >>>>>>> 39ba166d83db2967e509b8e1fc77bc542fb82957
 
@@ -100,6 +106,7 @@ int main()
     double Timer = 0;
 =======
     
+<<<<<<< HEAD
     Room::add(Vector2f(0,0), Vector2i(50,50), "walls/rocks.bmp");
     //Room::list.back().cover();
     Room::add(Vector2f(20,50), Vector2i(20,100), "walls/planks.bmp");
@@ -120,6 +127,42 @@ int main()
     sf::Clock clock;
     double deltaTime = 0;
     
+=======
+    
+    //creatures.push_back(Object("creatures/player.bmp", AnimationPresets::PlayerIdle, "player"));
+    //creatures.push_back(Object("creatures/player.bmp", AnimationPresets::PlayerWalk, "playerWalking"));
+    
+    //creatures[0].sprite.setPosition(0,0);
+    //creatures[1].sprite.setPosition(0,20);
+    
+    player.sprite.setPosition(0,0);
+    
+    sf::CircleShape c;
+    c.setFillColor(sf::Color::Red);
+    c.setRadius(5);
+    c.setOrigin(5,5);
+    
+    Room::add(Vector2f(0,0), Vector2i(50,50), "walls/rocks.bmp");
+    //Room::list.back().cover();
+    Room::add(Vector2f(20,50), Vector2i(20,100), "walls/planks.bmp");
+    
+    Room::coverAll();
+    
+    
+    /*
+    Object A, B;
+    A.setCollider(sf::Rect<double>(0,0,10,10));
+    A.sprite.setPosition(0,0);
+    B.setCollider(sf::Rect<double>(5,10,10,10));
+    B.sprite.setPosition(0,0);
+    std::cout<<A.testCollision(B);
+    std::cin.get();
+    */
+    
+    sf::Clock clock;
+    double deltaTime = 0;
+    
+>>>>>>> 39ba166d83db2967e509b8e1fc77bc542fb82957
     
     sf::View view;
     
@@ -128,14 +171,22 @@ int main()
     
     
     window.setView(view);
+<<<<<<< HEAD
+>>>>>>> 39ba166d83db2967e509b8e1fc77bc542fb82957
+=======
 >>>>>>> 39ba166d83db2967e509b8e1fc77bc542fb82957
     
     while (window.isOpen())
     {
         deltaTime = clock.restart().asSeconds();
 <<<<<<< HEAD
+<<<<<<< HEAD
         mouseRealPosition = getRealMouse(window);
 
+=======
+        
+        
+>>>>>>> 39ba166d83db2967e509b8e1fc77bc542fb82957
 =======
         
         
@@ -153,12 +204,17 @@ int main()
         albedo.clear(sf::Color::Black);
         shadows.clear(sf::Color::Black);
         
+<<<<<<< HEAD
 
 
+=======
+        
+>>>>>>> 39ba166d83db2967e509b8e1fc77bc542fb82957
         for(auto i = 0u; i<creatures.size(); i++)
         {
             creatures[i].base_update(deltaTime);
         }
+<<<<<<< HEAD
         player.base_update(deltaTime);
         for(auto i = 0u; i<CannonBall::list.size(); i++)
         {
@@ -190,7 +246,24 @@ int main()
         }
     
         player.base_update(deltaTime);
+=======
+    
+        player.base_update(deltaTime);
         
+        
+        Room::draw(window);
+        for(auto i = 0u; i<creatures.size(); i++)
+        {
+            creatures[i].draw(window);
+        }
+        player.draw(window);
+        
+        c.setPosition(getRealMouse(window));
+        window.draw(c);
+        
+>>>>>>> 39ba166d83db2967e509b8e1fc77bc542fb82957
+        
+        std::cout<<player.sprite.getPosition().x<<" "<<player.sprite.getPosition().y<<std::endl;
         
         Room::draw(window);
         for(auto i = 0u; i<creatures.size(); i++)

@@ -16,10 +16,16 @@ public:
 };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 namespace Collision
 {
+=======
+namespace Collision
+{
+    
+>>>>>>> 39ba166d83db2967e509b8e1fc77bc542fb82957
 =======
 namespace Collision
 {

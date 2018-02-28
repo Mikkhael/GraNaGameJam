@@ -9,6 +9,7 @@ double drag    = 0.0001;
 #include "Animations.hpp"
 #include "Colisions.hpp"
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 void flip(sf::Sprite& s)
 {
@@ -43,6 +44,27 @@ Vector2d getRealMouse(const sf::RenderWindow& rt)
 Vector2d mouseRealPosition(0,0);
 =======
 >>>>>>> 39ba166d83db2967e509b8e1fc77bc542fb82957
+=======
+
+void flip(sf::Sprite& s)
+{
+    auto r = s.getTextureRect();
+    s.setTextureRect(sf::IntRect(r.left + r.width, r.top, -r.width, r.height));
+}
+
+
+Vector2d getMouse(const sf::RenderWindow& rt)
+{
+    auto m = sf::Mouse::getPosition(rt);
+    return Vector2d(m.x, m.y);
+}
+
+Vector2d getRealMouse(const sf::RenderWindow& rt)
+{
+    auto m = sf::Mouse::getPosition(rt);
+    return Vector2d(m.x * rt.getView().getSize().x / rt.getSize().x, m.y * rt.getView().getSize().y / rt.getSize().y);
+}
+>>>>>>> 39ba166d83db2967e509b8e1fc77bc542fb82957
 
 class Object
 {
@@ -52,7 +74,11 @@ public:
 
     Animation* animation = nullptr;
 <<<<<<< HEAD
+<<<<<<< HEAD
     void setAnimation(const AnimationPreset& ap, const AnimationState state = Once)
+=======
+    void setAnimation(AnimationPreset ap, AnimationState state = Once)
+>>>>>>> 39ba166d83db2967e509b8e1fc77bc542fb82957
 =======
     void setAnimation(AnimationPreset ap, AnimationState state = Once)
 >>>>>>> 39ba166d83db2967e509b8e1fc77bc542fb82957
@@ -67,7 +93,10 @@ public:
         }
         animation->state = state;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 39ba166d83db2967e509b8e1fc77bc542fb82957
     }
     
     Collider* collider = nullptr;
@@ -99,6 +128,20 @@ public:
     {
         updateCollider();
         return collider->test(o, inclusive);
+<<<<<<< HEAD
+=======
+    }
+    
+    
+    void base_update(double deltaTime)
+    {
+        if(animation != nullptr)
+        {
+            animation->update(deltaTime);
+        }
+        
+        update(deltaTime);
+>>>>>>> 39ba166d83db2967e509b8e1fc77bc542fb82957
     }
     
     
@@ -189,6 +232,9 @@ public:
         : name("")
     {}
     
+<<<<<<< HEAD
+>>>>>>> 39ba166d83db2967e509b8e1fc77bc542fb82957
+=======
 >>>>>>> 39ba166d83db2967e509b8e1fc77bc542fb82957
     Object(const std::string& texture, const std::string& n = "")
         : name(n)
@@ -199,6 +245,9 @@ public:
 
 =======
     
+<<<<<<< HEAD
+>>>>>>> 39ba166d83db2967e509b8e1fc77bc542fb82957
+=======
 >>>>>>> 39ba166d83db2967e509b8e1fc77bc542fb82957
     Object(const std::string& texture, const AnimationPreset& ap, const std::string& n = "", AnimationState state=Loop)
         : name(n)
@@ -211,6 +260,9 @@ public:
 
 =======
     
+<<<<<<< HEAD
+>>>>>>> 39ba166d83db2967e509b8e1fc77bc542fb82957
+=======
 >>>>>>> 39ba166d83db2967e509b8e1fc77bc542fb82957
     Object(const std::string& texture, const sf::IntRect& rect, const std::string& n = "")
         : name(n)
@@ -222,6 +274,9 @@ public:
 
 =======
     
+<<<<<<< HEAD
+>>>>>>> 39ba166d83db2967e509b8e1fc77bc542fb82957
+=======
 >>>>>>> 39ba166d83db2967e509b8e1fc77bc542fb82957
     virtual ~Object()
     {

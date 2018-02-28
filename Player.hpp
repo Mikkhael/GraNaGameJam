@@ -4,6 +4,7 @@
 #include "Vectors.hpp"
 #include "Rooms.hpp"
 <<<<<<< HEAD
+<<<<<<< HEAD
 #include "Cannon.hpp"
 
 
@@ -11,6 +12,8 @@ class Player : public Object
 {
 
 =======
+=======
+>>>>>>> 39ba166d83db2967e509b8e1fc77bc542fb82957
 
 double gravity = 0.5;
 double drag    = 0.001;
@@ -18,6 +21,9 @@ double drag    = 0.001;
 class Player : public Object
 {
     
+<<<<<<< HEAD
+>>>>>>> 39ba166d83db2967e509b8e1fc77bc542fb82957
+=======
 >>>>>>> 39ba166d83db2967e509b8e1fc77bc542fb82957
     void trySettingAnimation(const AnimationPreset& ap)
     {
@@ -25,6 +31,7 @@ class Player : public Object
             return;
         animation->setPreset(ap);
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 public:
@@ -47,6 +54,8 @@ public:
     const double fireReppelForce = 200;
 
 =======
+=======
+>>>>>>> 39ba166d83db2967e509b8e1fc77bc542fb82957
     
 public:
     
@@ -63,6 +72,9 @@ public:
     bool moving = false;
     bool inAir = false;
     
+<<<<<<< HEAD
+>>>>>>> 39ba166d83db2967e509b8e1fc77bc542fb82957
+=======
 >>>>>>> 39ba166d83db2967e509b8e1fc77bc542fb82957
     void setValidAnimation()
     {
@@ -83,7 +95,11 @@ public:
         }
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> 39ba166d83db2967e509b8e1fc77bc542fb82957
 =======
     
 >>>>>>> 39ba166d83db2967e509b8e1fc77bc542fb82957
@@ -91,6 +107,7 @@ public:
     {
         Vector2d newPos = sprite.getPosition();
         auto temp = sprite.getPosition();
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -107,6 +124,8 @@ public:
 
 
 =======
+=======
+>>>>>>> 39ba166d83db2967e509b8e1fc77bc542fb82957
         
         
         if(!inAir || velocity.magnatudeSquared()<0.00001)
@@ -121,6 +140,9 @@ public:
         }
         
         
+<<<<<<< HEAD
+>>>>>>> 39ba166d83db2967e509b8e1fc77bc542fb82957
+=======
 >>>>>>> 39ba166d83db2967e509b8e1fc77bc542fb82957
         if(movable)
         {
@@ -141,7 +163,11 @@ public:
                 moving = false;
             }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+            
+>>>>>>> 39ba166d83db2967e509b8e1fc77bc542fb82957
 =======
             
 >>>>>>> 39ba166d83db2967e509b8e1fc77bc542fb82957
@@ -150,6 +176,7 @@ public:
                 if(!inAir)
                 {
                     inAir = true;
+<<<<<<< HEAD
 <<<<<<< HEAD
                     velocity += Vectors::down*300;
                     newPos.y-=1;
@@ -188,6 +215,8 @@ public:
                 //if(velocity.y >= 0)
                 if(std::abs(rect.top - newPos.y) >= std::abs(newPos.y + 16 - rect.top))
 =======
+=======
+>>>>>>> 39ba166d83db2967e509b8e1fc77bc542fb82957
                     velocity += Vectors::down*gravity*700;
                     newPos.y-=1;
                     //std::cout<<velocity.x<<" "<<velocity.y<<std::endl;
@@ -208,6 +237,9 @@ public:
             if(inAir && rect.width > rect.height)
             {
                 if(velocity.y >= 0)
+<<<<<<< HEAD
+>>>>>>> 39ba166d83db2967e509b8e1fc77bc542fb82957
+=======
 >>>>>>> 39ba166d83db2967e509b8e1fc77bc542fb82957
                 {
                     inAir = false;
@@ -222,7 +254,11 @@ public:
             else if(rect.width < rect.height)
             {
 <<<<<<< HEAD
+<<<<<<< HEAD
                 if(std::abs(rect.left - newPos.x) > std::abs(newPos.x + 16 - rect.left))
+=======
+                if(temp.x < newPos.x)
+>>>>>>> 39ba166d83db2967e509b8e1fc77bc542fb82957
 =======
                 if(temp.x < newPos.x)
 >>>>>>> 39ba166d83db2967e509b8e1fc77bc542fb82957
@@ -239,15 +275,21 @@ public:
         }
         //8std::cout<<std::endl;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
         sprite.setPosition(newPos);
     }
 
 =======
+=======
+>>>>>>> 39ba166d83db2967e509b8e1fc77bc542fb82957
         
         sprite.setPosition(newPos);
     }
     
+<<<<<<< HEAD
+>>>>>>> 39ba166d83db2967e509b8e1fc77bc542fb82957
+=======
 >>>>>>> 39ba166d83db2967e509b8e1fc77bc542fb82957
     virtual void draw(sf::RenderTarget& rt)
     {
@@ -260,7 +302,11 @@ public:
         rt.draw(sprite);
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> 39ba166d83db2967e509b8e1fc77bc542fb82957
 =======
     
 >>>>>>> 39ba166d83db2967e509b8e1fc77bc542fb82957
@@ -270,7 +316,11 @@ public:
         velocity = Vector2d(10, 10);
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> 39ba166d83db2967e509b8e1fc77bc542fb82957
 =======
     
 >>>>>>> 39ba166d83db2967e509b8e1fc77bc542fb82957
