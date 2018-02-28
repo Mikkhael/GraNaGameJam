@@ -16,6 +16,10 @@ public:
 };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cda4541f802314c0a6a217b49e8c933fbeb5f1be
 
 
 namespace Collision
@@ -25,6 +29,14 @@ namespace Collision
 {
     
 >>>>>>> 39ba166d83db2967e509b8e1fc77bc542fb82957
+<<<<<<< HEAD
+=======
+=======
+namespace Collision
+{
+    
+>>>>>>> 39ba166d83db2967e509b8e1fc77bc542fb82957
+>>>>>>> cda4541f802314c0a6a217b49e8c933fbeb5f1be
     template<class A, class B>
     bool test(const Vector2<A>& seg, B point, bool inclusive = true)
     {

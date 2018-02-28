@@ -80,6 +80,12 @@ public:
 
 =======
     
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 39ba166d83db2967e509b8e1fc77bc542fb82957
+=======
+>>>>>>> cda4541f802314c0a6a217b49e8c933fbeb5f1be
 >>>>>>> 39ba166d83db2967e509b8e1fc77bc542fb82957
     Animation(const AnimationPreset& a)
         : baseFrame(a.rect), length(a.length), framesCount(a.framesCount), framesPerRow(a.framesPerRow)
@@ -90,6 +96,12 @@ public:
 
 =======
     
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 39ba166d83db2967e509b8e1fc77bc542fb82957
+=======
+>>>>>>> cda4541f802314c0a6a217b49e8c933fbeb5f1be
 >>>>>>> 39ba166d83db2967e509b8e1fc77bc542fb82957
     void setPreset(const AnimationPreset& a)
     {
@@ -100,10 +112,20 @@ public:
         framesPerRow = a.framesPerRow;
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cda4541f802314c0a6a217b49e8c933fbeb5f1be
 
 =======
     
 >>>>>>> 39ba166d83db2967e509b8e1fc77bc542fb82957
+<<<<<<< HEAD
+=======
+=======
+    
+>>>>>>> 39ba166d83db2967e509b8e1fc77bc542fb82957
+>>>>>>> cda4541f802314c0a6a217b49e8c933fbeb5f1be
     bool compareWithPreset(const AnimationPreset& ap)
     {
         return baseFrame    == ap.rect         &&
@@ -117,6 +139,10 @@ public:
 namespace AnimationPresets
 {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cda4541f802314c0a6a217b49e8c933fbeb5f1be
     const AnimationPreset PlayerIdle{sf::IntRect(0,0,16,16), 1, 2};
     const AnimationPreset PlayerWalk{sf::IntRect(0,16,16,16), 0.5, 4};
     const AnimationPreset PlayerFly {sf::IntRect(16,16,16,16), 0, 1};
@@ -125,6 +151,14 @@ namespace AnimationPresets
     AnimationPreset PlayerWalk{sf::IntRect(0,16,16,16), 0.5, 4};
     AnimationPreset PlayerFly {sf::IntRect(16,16,16,16), 0, 1};
 >>>>>>> 39ba166d83db2967e509b8e1fc77bc542fb82957
+<<<<<<< HEAD
+=======
+=======
+    AnimationPreset PlayerIdle{sf::IntRect(0,0,16,16), 1, 2};
+    AnimationPreset PlayerWalk{sf::IntRect(0,16,16,16), 0.5, 4};
+    AnimationPreset PlayerFly {sf::IntRect(16,16,16,16), 0, 1};
+>>>>>>> 39ba166d83db2967e509b8e1fc77bc542fb82957
+>>>>>>> cda4541f802314c0a6a217b49e8c933fbeb5f1be
 }
 
 
