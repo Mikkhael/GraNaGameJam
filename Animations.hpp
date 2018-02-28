@@ -7,12 +7,12 @@ enum AnimationState{Stop, Once, Loop};
 class AnimationPreset
 {
 public:
-    
+
     sf::IntRect rect;
     double length;
     unsigned int framesCount;
     unsigned int framesPerRow;
-    
+
     AnimationPreset(sf::IntRect r, double l=0, unsigned int fc = 1, unsigned int fpr=0)
         : rect(r), length(l), framesCount(fc), framesPerRow(fpr)
     {
@@ -22,17 +22,17 @@ public:
 
 class Animation
 {
-    
+
     double frameCounter;
-    
+
 public:
     sf::IntRect baseFrame;
     double length;
     unsigned int framesCount;
     unsigned int framesPerRow;
-    
+
     AnimationState state = Stop;
-    
+
     void update(double deltaTime)
     {
         if(state == Stop) return;
@@ -44,18 +44,19 @@ public:
                 state = Stop;
         }
     }
-    
+
     void reset()
     {
         frameCounter = 0;
     }
-    
-    sf::IntRect get()
+
+    sf::IntRect get() const
     {
-        return get(frameCounter/length);
+        //std::cout<<framesCount<<" "<<frameCounter<<" "<<length<<std::endl;
+        return get(framesCount * frameCounter/length);
     }
-    
-    sf::IntRect get(int f)
+
+    sf::IntRect get(int f) const
     {
         f%=framesCount;
         if(framesPerRow == 0)
@@ -75,14 +76,22 @@ public:
                                baseFrame.height);
         }
     }
+<<<<<<< HEAD
+
+=======
     
-    Animation(AnimationPreset a)
-        : baseFrame(a.rect) , framesCount(a.framesCount), length(a.length), framesPerRow(a.framesPerRow)
+>>>>>>> 39ba166d83db2967e509b8e1fc77bc542fb82957
+    Animation(const AnimationPreset& a)
+        : baseFrame(a.rect), length(a.length), framesCount(a.framesCount), framesPerRow(a.framesPerRow)
     {
-        
+
     }
+<<<<<<< HEAD
+
+=======
     
-    void setPreset(AnimationPreset a)
+>>>>>>> 39ba166d83db2967e509b8e1fc77bc542fb82957
+    void setPreset(const AnimationPreset& a)
     {
         reset();
         baseFrame = a.rect;
@@ -90,12 +99,32 @@ public:
         framesCount = a.framesCount;
         framesPerRow = a.framesPerRow;
     }
+<<<<<<< HEAD
+
+=======
+    
+>>>>>>> 39ba166d83db2967e509b8e1fc77bc542fb82957
+    bool compareWithPreset(const AnimationPreset& ap)
+    {
+        return baseFrame    == ap.rect         &&
+               length       == ap.length       &&
+               framesCount  == ap.framesCount  &&
+               framesPerRow == ap.framesPerRow;
+    }
 };
 
 
 namespace AnimationPresets
 {
-    
+<<<<<<< HEAD
+    const AnimationPreset PlayerIdle{sf::IntRect(0,0,16,16), 1, 2};
+    const AnimationPreset PlayerWalk{sf::IntRect(0,16,16,16), 0.5, 4};
+    const AnimationPreset PlayerFly {sf::IntRect(16,16,16,16), 0, 1};
+=======
+    AnimationPreset PlayerIdle{sf::IntRect(0,0,16,16), 1, 2};
+    AnimationPreset PlayerWalk{sf::IntRect(0,16,16,16), 0.5, 4};
+    AnimationPreset PlayerFly {sf::IntRect(16,16,16,16), 0, 1};
+>>>>>>> 39ba166d83db2967e509b8e1fc77bc542fb82957
 }
 
 
