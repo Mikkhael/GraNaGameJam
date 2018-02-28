@@ -57,18 +57,9 @@
 		</Linker>
 		<Unit filename="Animations.hpp" />
 <<<<<<< HEAD
-<<<<<<< HEAD
 		<Unit filename="Cannon.hpp" />
 =======
 >>>>>>> 39ba166d83db2967e509b8e1fc77bc542fb82957
-=======
-<<<<<<< HEAD
-		<Unit filename="Cannon.hpp" />
-=======
->>>>>>> 39ba166d83db2967e509b8e1fc77bc542fb82957
-=======
->>>>>>> 39ba166d83db2967e509b8e1fc77bc542fb82957
->>>>>>> cda4541f802314c0a6a217b49e8c933fbeb5f1be
 		<Unit filename="Colisions.hpp" />
 		<Unit filename="Object.hpp" />
 		<Unit filename="Player.hpp" />

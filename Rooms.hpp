@@ -10,10 +10,6 @@ class Platform
 public:
     sf::Rect<double> collid;
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cda4541f802314c0a6a217b49e8c933fbeb5f1be
 
     Platform(const sf::Rect<double>& r)
         : collid(r)
@@ -22,11 +18,6 @@ public:
     static std::vector<Platform> list;
 
 =======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 39ba166d83db2967e509b8e1fc77bc542fb82957
->>>>>>> cda4541f802314c0a6a217b49e8c933fbeb5f1be
     
     Platform(const sf::Rect<double>& r)
         : collid(r)
@@ -34,12 +25,6 @@ public:
     
     static std::vector<Platform> list;
     
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 39ba166d83db2967e509b8e1fc77bc542fb82957
-=======
->>>>>>> cda4541f802314c0a6a217b49e8c933fbeb5f1be
 >>>>>>> 39ba166d83db2967e509b8e1fc77bc542fb82957
     static auto add(const sf::Rect<double>& r)
     {
@@ -48,29 +33,16 @@ public:
     }
     
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cda4541f802314c0a6a217b49e8c933fbeb5f1be
     constexpr static double tolerance = 2.5;
     
 =======
 >>>>>>> 39ba166d83db2967e509b8e1fc77bc542fb82957
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 39ba166d83db2967e509b8e1fc77bc542fb82957
->>>>>>> cda4541f802314c0a6a217b49e8c933fbeb5f1be
     static std::vector<sf::Rect<double> > testAll(Object& o)
     {
         std::vector<sf::Rect<double> > res;
         for(auto& v : list)
         {
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cda4541f802314c0a6a217b49e8c933fbeb5f1be
             if(v.collid.width > 1 || v.collid.height > 1)
             {
                 /**/
@@ -100,23 +72,11 @@ public:
             {
                 res.push_back(v.collid);
 >>>>>>> 39ba166d83db2967e509b8e1fc77bc542fb82957
-<<<<<<< HEAD
-=======
-=======
-            if(o.testCollision(v.collid, false))
-            {
-                res.push_back(v.collid);
->>>>>>> 39ba166d83db2967e509b8e1fc77bc542fb82957
->>>>>>> cda4541f802314c0a6a217b49e8c933fbeb5f1be
             }
         }
         return res;
     }
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cda4541f802314c0a6a217b49e8c933fbeb5f1be
 
     static void show(sf::RenderTarget& rt)
     {
@@ -134,11 +94,6 @@ public:
     }
 =======
 >>>>>>> 39ba166d83db2967e509b8e1fc77bc542fb82957
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 39ba166d83db2967e509b8e1fc77bc542fb82957
->>>>>>> cda4541f802314c0a6a217b49e8c933fbeb5f1be
 };
 
 std::vector<Platform> Platform::list;
@@ -147,30 +102,15 @@ class Room
 {
 public:
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cda4541f802314c0a6a217b49e8c933fbeb5f1be
 
     Object o;
     static std::vector<Room> list;
 
 =======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 39ba166d83db2967e509b8e1fc77bc542fb82957
->>>>>>> cda4541f802314c0a6a217b49e8c933fbeb5f1be
     
     Object o;
     static std::vector<Room> list;    
     
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 39ba166d83db2967e509b8e1fc77bc542fb82957
-=======
->>>>>>> cda4541f802314c0a6a217b49e8c933fbeb5f1be
 >>>>>>> 39ba166d83db2967e509b8e1fc77bc542fb82957
     Room(const Vector2f& pos, const Vector2i& size, const std::string& texture)
         : o(texture, sf::IntRect(0,0,size.x, size.y))
@@ -178,39 +118,19 @@ public:
         o.sprite.setPosition(pos);
     }
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cda4541f802314c0a6a217b49e8c933fbeb5f1be
 
 =======
     
 >>>>>>> 39ba166d83db2967e509b8e1fc77bc542fb82957
-<<<<<<< HEAD
-=======
-=======
-    
->>>>>>> 39ba166d83db2967e509b8e1fc77bc542fb82957
->>>>>>> cda4541f802314c0a6a217b49e8c933fbeb5f1be
     static void add(const Vector2f& pos, const Vector2i& size, const std::string& texture)
     {
         list.push_back(Room(pos,size,texture));
     }
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cda4541f802314c0a6a217b49e8c933fbeb5f1be
 
 =======
     
 >>>>>>> 39ba166d83db2967e509b8e1fc77bc542fb82957
-<<<<<<< HEAD
-=======
-=======
-    
->>>>>>> 39ba166d83db2967e509b8e1fc77bc542fb82957
->>>>>>> cda4541f802314c0a6a217b49e8c933fbeb5f1be
     static void draw(sf::RenderTarget& rt)
     {
         for(auto& i : list)
@@ -219,20 +139,10 @@ public:
         }
     }
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cda4541f802314c0a6a217b49e8c933fbeb5f1be
 
 =======
     
 >>>>>>> 39ba166d83db2967e509b8e1fc77bc542fb82957
-<<<<<<< HEAD
-=======
-=======
-    
->>>>>>> 39ba166d83db2967e509b8e1fc77bc542fb82957
->>>>>>> cda4541f802314c0a6a217b49e8c933fbeb5f1be
     void cover()
     {
         //Platform::add(sf::Rect<double>(o.sprite.getPosition().x, o.sprite.getPosition().y, o.sprite.getTextureRect().width, 0.1));
@@ -241,29 +151,15 @@ public:
         Platform::add(sf::Rect<double>(o.sprite.getPosition().x, o.sprite.getPosition().y + o.sprite.getTextureRect().height, o.sprite.getTextureRect().width, 0.1));
     }
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cda4541f802314c0a6a217b49e8c933fbeb5f1be
 
 =======
     
 >>>>>>> 39ba166d83db2967e509b8e1fc77bc542fb82957
-<<<<<<< HEAD
-=======
-=======
-    
->>>>>>> 39ba166d83db2967e509b8e1fc77bc542fb82957
->>>>>>> cda4541f802314c0a6a217b49e8c933fbeb5f1be
     static void coverAll()
     {
         std::vector<Platform> horizontal, vertical;
         for(auto& r : list)
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cda4541f802314c0a6a217b49e8c933fbeb5f1be
         {
             horizontal.emplace_back(sf::Rect<double>(r.o.sprite.getPosition().x, r.o.sprite.getPosition().y, r.o.sprite.getTextureRect().width, 0.1));
             vertical.emplace_back(sf::Rect<double>(r.o.sprite.getPosition().x, r.o.sprite.getPosition().y, 0.1, r.o.sprite.getTextureRect().height));
@@ -271,23 +167,12 @@ public:
             vertical.emplace_back(sf::Rect<double>(r.o.sprite.getPosition().x + r.o.sprite.getTextureRect().width, r.o.sprite.getPosition().y, 0.1, r.o.sprite.getTextureRect().height));
 
 =======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 39ba166d83db2967e509b8e1fc77bc542fb82957
->>>>>>> cda4541f802314c0a6a217b49e8c933fbeb5f1be
         {                
             horizontal.emplace_back(sf::Rect<double>(r.o.sprite.getPosition().x, r.o.sprite.getPosition().y, r.o.sprite.getTextureRect().width, 0.1));
             vertical.emplace_back(sf::Rect<double>(r.o.sprite.getPosition().x, r.o.sprite.getPosition().y, 0.1, r.o.sprite.getTextureRect().height));
             horizontal.emplace_back(sf::Rect<double>(r.o.sprite.getPosition().x + r.o.sprite.getTextureRect().width, r.o.sprite.getPosition().y, 0.1, r.o.sprite.getTextureRect().height));
             vertical.emplace_back(sf::Rect<double>(r.o.sprite.getPosition().x, r.o.sprite.getPosition().y + r.o.sprite.getTextureRect().height, r.o.sprite.getTextureRect().width, 0.1));
             
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 39ba166d83db2967e509b8e1fc77bc542fb82957
-=======
->>>>>>> cda4541f802314c0a6a217b49e8c933fbeb5f1be
 >>>>>>> 39ba166d83db2967e509b8e1fc77bc542fb82957
         }
         for(Platform& p : horizontal)
@@ -296,10 +181,6 @@ public:
             {
                 if(&p == &p2) continue;
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cda4541f802314c0a6a217b49e8c933fbeb5f1be
                 if(std::abs(p.collid.top - p2.collid.top) > 0.001)
                     continue;
                 if(!Collision::test(Vector2d(p.collid.left, p.collid.left+p.collid.width), Vector2d(p2.collid.left, p2.collid.left + p2.collid.width)))
@@ -328,11 +209,6 @@ public:
 
 
 =======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 39ba166d83db2967e509b8e1fc77bc542fb82957
->>>>>>> cda4541f802314c0a6a217b49e8c933fbeb5f1be
                 if(std::abs(p.collid.top - p2.collid.top) < 0.001)
                     continue;
                 if(!Collision::test(Vector2d(p.collid.left, p.collid.left+p.collid.width), Vector2d(p2.collid.left, p2.collid.left + p2.collid.width)))
@@ -357,12 +233,6 @@ public:
                     double tempRleft  = r.left + r.width;
                     double tempRwidth = l.left + l.width - r.left - r.width;
                     
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 39ba166d83db2967e509b8e1fc77bc542fb82957
-=======
->>>>>>> cda4541f802314c0a6a217b49e8c933fbeb5f1be
 >>>>>>> 39ba166d83db2967e509b8e1fc77bc542fb82957
                     l.width = tempLwidth;
                     r.left  = tempRleft;
@@ -370,10 +240,6 @@ public:
                 }
             }
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cda4541f802314c0a6a217b49e8c933fbeb5f1be
 
         }
         for(Platform& p : vertical)
@@ -421,14 +287,6 @@ public:
         }
         
 >>>>>>> 39ba166d83db2967e509b8e1fc77bc542fb82957
-<<<<<<< HEAD
-=======
-=======
-            
-        }
-        
->>>>>>> 39ba166d83db2967e509b8e1fc77bc542fb82957
->>>>>>> cda4541f802314c0a6a217b49e8c933fbeb5f1be
         for(auto& p : horizontal)
         {
             if(p.collid.width > 0.0001)
@@ -444,10 +302,6 @@ public:
             }
         }
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cda4541f802314c0a6a217b49e8c933fbeb5f1be
 
     }
 
@@ -456,14 +310,6 @@ public:
     }
     
 >>>>>>> 39ba166d83db2967e509b8e1fc77bc542fb82957
-<<<<<<< HEAD
-=======
-=======
-        
-    }
-    
->>>>>>> 39ba166d83db2967e509b8e1fc77bc542fb82957
->>>>>>> cda4541f802314c0a6a217b49e8c933fbeb5f1be
 };
 
 std::vector<Room> Room::list;

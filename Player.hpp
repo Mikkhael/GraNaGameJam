@@ -4,10 +4,6 @@
 #include "Vectors.hpp"
 #include "Rooms.hpp"
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cda4541f802314c0a6a217b49e8c933fbeb5f1be
 #include "Cannon.hpp"
 
 
@@ -15,11 +11,6 @@ class Player : public Object
 {
 
 =======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 39ba166d83db2967e509b8e1fc77bc542fb82957
->>>>>>> cda4541f802314c0a6a217b49e8c933fbeb5f1be
 
 double gravity = 0.5;
 double drag    = 0.001;
@@ -27,12 +18,6 @@ double drag    = 0.001;
 class Player : public Object
 {
     
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 39ba166d83db2967e509b8e1fc77bc542fb82957
-=======
->>>>>>> cda4541f802314c0a6a217b49e8c933fbeb5f1be
 >>>>>>> 39ba166d83db2967e509b8e1fc77bc542fb82957
     void trySettingAnimation(const AnimationPreset& ap)
     {
@@ -41,10 +26,6 @@ class Player : public Object
         animation->setPreset(ap);
     }
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cda4541f802314c0a6a217b49e8c933fbeb5f1be
 
 public:
 
@@ -66,11 +47,6 @@ public:
     const double fireReppelForce = 200;
 
 =======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 39ba166d83db2967e509b8e1fc77bc542fb82957
->>>>>>> cda4541f802314c0a6a217b49e8c933fbeb5f1be
     
 public:
     
@@ -87,12 +63,6 @@ public:
     bool moving = false;
     bool inAir = false;
     
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 39ba166d83db2967e509b8e1fc77bc542fb82957
-=======
->>>>>>> cda4541f802314c0a6a217b49e8c933fbeb5f1be
 >>>>>>> 39ba166d83db2967e509b8e1fc77bc542fb82957
     void setValidAnimation()
     {
@@ -113,29 +83,15 @@ public:
         }
     }
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cda4541f802314c0a6a217b49e8c933fbeb5f1be
 
 =======
     
 >>>>>>> 39ba166d83db2967e509b8e1fc77bc542fb82957
-<<<<<<< HEAD
-=======
-=======
-    
->>>>>>> 39ba166d83db2967e509b8e1fc77bc542fb82957
->>>>>>> cda4541f802314c0a6a217b49e8c933fbeb5f1be
     virtual void update(double deltaTime)
     {
         Vector2d newPos = sprite.getPosition();
         auto temp = sprite.getPosition();
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cda4541f802314c0a6a217b49e8c933fbeb5f1be
 
 
         if(!inAir || velocity.magnatudeSquared()<0.00001)
@@ -151,11 +107,6 @@ public:
 
 
 =======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 39ba166d83db2967e509b8e1fc77bc542fb82957
->>>>>>> cda4541f802314c0a6a217b49e8c933fbeb5f1be
         
         
         if(!inAir || velocity.magnatudeSquared()<0.00001)
@@ -170,12 +121,6 @@ public:
         }
         
         
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 39ba166d83db2967e509b8e1fc77bc542fb82957
-=======
->>>>>>> cda4541f802314c0a6a217b49e8c933fbeb5f1be
 >>>>>>> 39ba166d83db2967e509b8e1fc77bc542fb82957
         if(movable)
         {
@@ -196,30 +141,16 @@ public:
                 moving = false;
             }
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cda4541f802314c0a6a217b49e8c933fbeb5f1be
 
 =======
             
 >>>>>>> 39ba166d83db2967e509b8e1fc77bc542fb82957
-<<<<<<< HEAD
-=======
-=======
-            
->>>>>>> 39ba166d83db2967e509b8e1fc77bc542fb82957
->>>>>>> cda4541f802314c0a6a217b49e8c933fbeb5f1be
             if(sf::Keyboard::isKeyPressed(sf::Keyboard::Space))
             {
                 if(!inAir)
                 {
                     inAir = true;
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cda4541f802314c0a6a217b49e8c933fbeb5f1be
                     velocity += Vectors::down*300;
                     newPos.y-=1;
                     //std::cout<<velocity.x<<" "<<velocity.y<<std::endl;
@@ -257,11 +188,6 @@ public:
                 //if(velocity.y >= 0)
                 if(std::abs(rect.top - newPos.y) >= std::abs(newPos.y + 16 - rect.top))
 =======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 39ba166d83db2967e509b8e1fc77bc542fb82957
->>>>>>> cda4541f802314c0a6a217b49e8c933fbeb5f1be
                     velocity += Vectors::down*gravity*700;
                     newPos.y-=1;
                     //std::cout<<velocity.x<<" "<<velocity.y<<std::endl;
@@ -282,12 +208,6 @@ public:
             if(inAir && rect.width > rect.height)
             {
                 if(velocity.y >= 0)
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 39ba166d83db2967e509b8e1fc77bc542fb82957
-=======
->>>>>>> cda4541f802314c0a6a217b49e8c933fbeb5f1be
 >>>>>>> 39ba166d83db2967e509b8e1fc77bc542fb82957
                 {
                     inAir = false;
@@ -302,20 +222,10 @@ public:
             else if(rect.width < rect.height)
             {
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cda4541f802314c0a6a217b49e8c933fbeb5f1be
                 if(std::abs(rect.left - newPos.x) > std::abs(newPos.x + 16 - rect.left))
 =======
                 if(temp.x < newPos.x)
 >>>>>>> 39ba166d83db2967e509b8e1fc77bc542fb82957
-<<<<<<< HEAD
-=======
-=======
-                if(temp.x < newPos.x)
->>>>>>> 39ba166d83db2967e509b8e1fc77bc542fb82957
->>>>>>> cda4541f802314c0a6a217b49e8c933fbeb5f1be
                 {
                     newPos.x = rect.left - 10;
                 }
@@ -329,30 +239,15 @@ public:
         }
         //8std::cout<<std::endl;
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cda4541f802314c0a6a217b49e8c933fbeb5f1be
 
         sprite.setPosition(newPos);
     }
 
 =======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 39ba166d83db2967e509b8e1fc77bc542fb82957
->>>>>>> cda4541f802314c0a6a217b49e8c933fbeb5f1be
         
         sprite.setPosition(newPos);
     }
     
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 39ba166d83db2967e509b8e1fc77bc542fb82957
-=======
->>>>>>> cda4541f802314c0a6a217b49e8c933fbeb5f1be
 >>>>>>> 39ba166d83db2967e509b8e1fc77bc542fb82957
     virtual void draw(sf::RenderTarget& rt)
     {
@@ -365,40 +260,20 @@ public:
         rt.draw(sprite);
     }
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cda4541f802314c0a6a217b49e8c933fbeb5f1be
 
 =======
     
 >>>>>>> 39ba166d83db2967e509b8e1fc77bc542fb82957
-<<<<<<< HEAD
-=======
-=======
-    
->>>>>>> 39ba166d83db2967e509b8e1fc77bc542fb82957
->>>>>>> cda4541f802314c0a6a217b49e8c933fbeb5f1be
     Player() : Object("creatures/player.bmp", AnimationPresets::PlayerIdle, "PLAYER")
     {
         setCollider(sf::Rect<double>(6, 1, 4, 16));
         velocity = Vector2d(10, 10);
     }
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cda4541f802314c0a6a217b49e8c933fbeb5f1be
 
 =======
     
 >>>>>>> 39ba166d83db2967e509b8e1fc77bc542fb82957
-<<<<<<< HEAD
-=======
-=======
-    
->>>>>>> 39ba166d83db2967e509b8e1fc77bc542fb82957
->>>>>>> cda4541f802314c0a6a217b49e8c933fbeb5f1be
     virtual ~Player(){};
 };
 
