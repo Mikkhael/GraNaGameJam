@@ -428,17 +428,25 @@
 1518602545 c:\users\bondg\desktop\sfml\granagamejam\animations.hpp
 	<vector>
 
+<<<<<<< HEAD
 1519913687 source:c:\users\bondg_000\desktop\granagamejam\main.cpp
 	<SFML/Graphics.hpp>
 	<iostream>
 	<vector>
 	<string>
 	<sstream>
+=======
+1518274446 source:c:\users\bondg_000\desktop\granagamejam\main.cpp
+	<SFML/Graphics.hpp>
+	<iostream>
+	<vector>
+>>>>>>> 8fc76f9217a2771ed04dd076ac4ffe143a3a092d
 	"Vectors.hpp"
 	"Object.hpp"
 	"Colisions.hpp"
 	"TextureManager.hpp"
 	"Player.hpp"
+<<<<<<< HEAD
 	"lights.hpp"
 
 1519859407 c:\users\bondg_000\desktop\granagamejam\vectors.hpp
@@ -446,6 +454,14 @@
 	<cmath>
 
 1519892779 c:\users\bondg_000\desktop\granagamejam\object.hpp
+=======
+
+1518208936 c:\users\bondg_000\desktop\granagamejam\vectors.hpp
+	<iostream>
+	<cmath>
+
+1518122027 c:\users\bondg_000\desktop\granagamejam\object.hpp
+>>>>>>> 8fc76f9217a2771ed04dd076ac4ffe143a3a092d
 	"Vectors.hpp"
 	"TextureManager.hpp"
 	"Animations.hpp"
@@ -454,7 +470,11 @@
 1517942423 c:\users\bondg_000\desktop\granagamejam\texturemanager.hpp
 	<map>
 
+<<<<<<< HEAD
 1519888079 c:\users\bondg_000\desktop\granagamejam\animations.hpp
+=======
+1518026515 c:\users\bondg_000\desktop\granagamejam\animations.hpp
+>>>>>>> 8fc76f9217a2771ed04dd076ac4ffe143a3a092d
 	<vector>
 
 1517005269 c:\program files (x86)\codeblocks\sfml\sfml-2.4.2\include\sfml\graphics.hpp
@@ -845,6 +865,7 @@
 	<string>
 	<vector>
 
+<<<<<<< HEAD
 1519892897 c:\users\bondg_000\desktop\granagamejam\colisions.hpp
 	"Vectors.hpp"
 
@@ -854,12 +875,26 @@
 	"Cannon.hpp"
 
 1519913579 c:\users\bondg_000\desktop\granagamejam\rooms.hpp
+=======
+1518116578 c:\users\bondg_000\desktop\granagamejam\colisions.hpp
+	"Vectors.hpp"
+
+1518274144 c:\users\bondg_000\desktop\granagamejam\player.hpp
+	"Vectors.hpp"
+	"Rooms.hpp"
+
+1518274278 c:\users\bondg_000\desktop\granagamejam\rooms.hpp
+>>>>>>> 8fc76f9217a2771ed04dd076ac4ffe143a3a092d
 	"Object.hpp"
 	<vector>
 	<tuple>
 
+<<<<<<< HEAD
 1518274278 D
 
+=======
+<<<<<<< HEAD
+>>>>>>> 8fc76f9217a2771ed04dd076ac4ffe143a3a092d
 1518609299 source:c:\users\pascal\desktop\granagamejam\main.cpp
 	<SFML/Graphics.hpp>
 	<iostream>
@@ -1308,6 +1343,7 @@
 	"Vectors.hpp"
 	"Rooms.hpp"
 
+<<<<<<< HEAD
 1519858936 "
 
 1519858936 a166d83db2967e509b8e1fc77bc542fb82957
@@ -1321,3 +1357,7 @@
 	"Vectors.hpp"
 	"Rooms.hpp"
 
+=======
+=======
+>>>>>>> 39ba166d83db2967e509b8e1fc77bc542fb82957
+>>>>>>> 8fc76f9217a2771ed04dd076ac4ffe143a3a092d
