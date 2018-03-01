@@ -75,27 +75,17 @@ public:
                                baseFrame.width,
                                baseFrame.height);
         }
-<<<<<<< HEAD
     }/*
 <<<<<<< HEAD
 
 =======
 
 >>>>>>> 39ba166d83db2967e509b8e1fc77bc542fb82957*/
-=======
-    }
-<<<<<<< HEAD
-
-=======
-    
->>>>>>> 39ba166d83db2967e509b8e1fc77bc542fb82957
->>>>>>> 8fc76f9217a2771ed04dd076ac4ffe143a3a092d
     Animation(const AnimationPreset& a)
         : baseFrame(a.rect), length(a.length), framesCount(a.framesCount), framesPerRow(a.framesPerRow)
     {
 
     }
-<<<<<<< HEAD
     /*
 <<<<<<< HEAD
 
@@ -103,13 +93,6 @@ public:
 
 >>>>>>> 39ba166d83db2967e509b8e1fc77bc542fb82957
 */
-=======
-<<<<<<< HEAD
-
-=======
-    
->>>>>>> 39ba166d83db2967e509b8e1fc77bc542fb82957
->>>>>>> 8fc76f9217a2771ed04dd076ac4ffe143a3a092d
     void setPreset(const AnimationPreset& a)
     {
         reset();
@@ -118,7 +101,6 @@ public:
         framesCount = a.framesCount;
         framesPerRow = a.framesPerRow;
     }
-<<<<<<< HEAD
     /*
 <<<<<<< HEAD
 
@@ -126,13 +108,6 @@ public:
 
 >>>>>>> 39ba166d83db2967e509b8e1fc77bc542fb82957
 */
-=======
-<<<<<<< HEAD
-
-=======
-    
->>>>>>> 39ba166d83db2967e509b8e1fc77bc542fb82957
->>>>>>> 8fc76f9217a2771ed04dd076ac4ffe143a3a092d
     bool compareWithPreset(const AnimationPreset& ap)
     {
         return baseFrame    == ap.rect         &&
@@ -145,27 +120,17 @@ public:
 
 namespace AnimationPresets
 {
-<<<<<<< HEAD
 //<<<<<<< HEAD
     const AnimationPreset PlayerIdle{sf::IntRect(0,0,16,16), 1, 2};
     const AnimationPreset PlayerWalk{sf::IntRect(0,16,16,16), 0.5, 4};
     const AnimationPreset PlayerFly {sf::IntRect(16,16,16,16), 0, 1};
     /*
 =======
-<<<<<<< HEAD
-    const AnimationPreset PlayerIdle{sf::IntRect(0,0,16,16), 1, 2};
-    const AnimationPreset PlayerWalk{sf::IntRect(0,16,16,16), 0.5, 4};
-    const AnimationPreset PlayerFly {sf::IntRect(16,16,16,16), 0, 1};
->>>>>>> 8fc76f9217a2771ed04dd076ac4ffe143a3a092d
-=======
     AnimationPreset PlayerIdle{sf::IntRect(0,0,16,16), 1, 2};
     AnimationPreset PlayerWalk{sf::IntRect(0,16,16,16), 0.5, 4};
     AnimationPreset PlayerFly {sf::IntRect(16,16,16,16), 0, 1};
 >>>>>>> 39ba166d83db2967e509b8e1fc77bc542fb82957
-<<<<<<< HEAD
 */
-=======
->>>>>>> 8fc76f9217a2771ed04dd076ac4ffe143a3a092d
 }
 
 

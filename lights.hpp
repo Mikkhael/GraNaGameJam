@@ -51,13 +51,8 @@ void emitLight(sf::RenderTarget& rt, LightEmmition& le, const Vector2d& pos, dou
         
         shadow[0].position = sf::Vector2f(a);
         shadow[1].position = sf::Vector2f(b);
-<<<<<<< HEAD
         shadow[2].position = sf::Vector2f(pos + (a-pos).normalize()*range*4);
         shadow[3].position = sf::Vector2f(pos + (b-pos).normalize()*range*4);
-=======
-        shadow[2].position = sf::Vector2f(pos + (a-pos).normalize()*range);
-        shadow[3].position = sf::Vector2f(pos + (b-pos).normalize()*range);
->>>>>>> 8fc76f9217a2771ed04dd076ac4ffe143a3a092d
         le.texture.draw(shadow);
     }
     le.texture.display();
