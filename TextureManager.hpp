@@ -8,13 +8,16 @@ public:
     
     static bool ALLREPEAT;
     
-    std::map<const char*, sf::Texture*> textures;
+    std::map<const std::string, sf::Texture*> textures;
     
     
-    void load(const char* path)
+    void load(const std::string& path)
     {
+        sf::Image img;
+        img.loadFromFile(path);
+        img.createMaskFromColor(sf::Color::Magenta);
         sf::Texture* T = new sf::Texture;
-        T->loadFromFile(path);
+        T->loadFromImage(img);
         if(ALLREPEAT)
         {
             T->setRepeated(true);
@@ -23,7 +26,7 @@ public:
     }
     
     
-    sf::Texture& get(const char* path)
+    sf::Texture& get(const std::string& path)
     {
         if(textures.find(path) == textures.end())
         {

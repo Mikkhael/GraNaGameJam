@@ -23,6 +23,11 @@ public:
         : x(_x), y(_y)
     {}
     
+    template<typename _T>
+    Vector2(const sf::Vector2<_T>& v)
+        : x(v.x), y(v.y)
+    {}
+    
     template<typename T_>
     Vector2<T> operator+(Vector2<T_> v) const
     {
@@ -75,13 +80,13 @@ public:
     
     long double magnatudeSquared() const;
     long double magnatude() const;
-    Vector2<long double> normalize() const;
+    Vector2<double> normalize() const;
     Vector2<T>& normalizeSelf();
     Vector2<T> rotate(double angle) const;
     Vector2<T>& rotateSelf(double angle);
     
     template<typename _T>
-    operator sf::Vector2<_T>()
+    operator sf::Vector2<_T>() const
     {
         return sf::Vector2<_T>(x, y);
     }
@@ -107,10 +112,10 @@ long double Vector2<T>::magnatude() const
 }
 
 template<typename T>
-Vector2<long double> Vector2<T>::normalize() const
+Vector2<double> Vector2<T>::normalize() const
 {
     auto mag = magnatude();
-    return Vector2<long double>(x/mag, y/mag);
+    return Vector2<double>(x/mag, y/mag);
 }
 
 template<typename T>
